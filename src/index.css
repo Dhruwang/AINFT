@@ -169,6 +169,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .formInputDiv{
   display: flex;
