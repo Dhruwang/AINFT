@@ -164,6 +164,41 @@ p {
   align-items: center;
 }
 
+/* home css starts  */
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formInputDiv{
+  display: flex;
+  flex-direction: column;
+}
+.homeInner{
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+.imgDiv{
+  border: 2px solid green;
+  height: 100%;
+  width: 50%;
+
+}
+.imgDiv img{
+  height: 100%;
+  width: 100%;
+}
+/* home css ends */
+
 @media screen and (max-width: 768px) {
   .form {
     flex-direction: column;

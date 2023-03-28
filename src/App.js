@@ -13,6 +13,7 @@ import NFT from './abis/NFT.json'
 
 // Config
 import config from './config.json';
+import Home from './components/Home';
 
 function App() {
   const [provider, setProvider] = useState(null)
@@ -30,7 +31,7 @@ function App() {
   return (
     <div>
       <Navigation account={account} setAccount={setAccount} />
-      <p>Edit App.js to get started.</p>
+      <Home />
 
     </div>
   );
