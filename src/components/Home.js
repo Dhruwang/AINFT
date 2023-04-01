@@ -82,8 +82,9 @@ export default function (props) {
     const mintImage=async(tokenURI)=>{
         const signer = await props.provider.getSigner()
         const transaction = await props.nft.connect(signer).mint(tokenURI,{value: ethers.utils.parseUnits("0.01","ether")})
-        
+        setpage(2)
         await transaction.wait()
+        setpage(4)
         setName("")
         setDescription("")
     }
@@ -112,6 +113,11 @@ export default function (props) {
                    {props.account?<button type='submit'className='btn' onClick={handleMintImage}>Mint</button>:<div>You need to connect your account in order to mint</div>}
                 <button type='submit'className='btn backbtn' onClick={handleGoBack}>Back</button>
             <p className="metaData">View <a href={url}  target="_blank"> Metadata</a></p> 
+                </div>:""}
+                {page ===4?<div className='mintSuccessfull'>
+                <i class="bi bi-check-circle-fill"></i>
+                <p>NFT minted successfully</p>
+                <button type='submit'className='btn backbtn' onClick={handleGoBack}>Home</button>
                 </div>:""}
                 </form>
             </div>
