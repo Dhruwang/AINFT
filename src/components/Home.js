@@ -12,14 +12,18 @@ export default function (props) {
     const [account, setAccount] = useState(null)
     const [loading, setloading] = useState(false)
 
-    const [name, setName] = useState()
-    const [description, setDescription] = useState()
+    const [name, setName] = useState("")
+    const [description, setDescription] = useState("")
     const [img, setImg] = useState("")
     const [url, setUrl] = useState("")
     const [page, setpage] = useState(1)
 
     const handleCreateImage = async (e) => {
         e.preventDefault()
+        if(name==="" || description===""){
+            document.getElementById("alert").style.display = "block"
+            return;
+        }
 
         const imageData = createImg()
 
@@ -104,6 +108,7 @@ export default function (props) {
                         <label>Prompt</label>
                         <input type="text" placeholder='Enter prompt' value={description} onChange={(e) => { setDescription(e.target.value) }}></input>
                     </div>
+                    <p className='red' id='alert'>All fields are required</p>
                     <button type='submit' className='btn' onClick={handleCreateImage}>Generate</button>
                     </div>
                 :<div></div>}

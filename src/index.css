@@ -7,7 +7,14 @@
 
 }
 
-
+.red{
+  color: red;
+  width: 100%;
+  text-align: center;
+}
+#alert{
+  display: none;
+}
 body {
   margin: 0;
   font-family: "Play";

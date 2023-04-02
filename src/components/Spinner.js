@@ -1,5 +1,4 @@
 import React from 'react'
-import ethLoader from "../Images/ethLoader.gif";
 
 export default function Spinner() {
   return (
